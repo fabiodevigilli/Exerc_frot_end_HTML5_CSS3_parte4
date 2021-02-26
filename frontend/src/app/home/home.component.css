@@ -1,3 +1,24 @@
+/* main > p {
+    background: red;
+} */
+/* acima estamos buscabdo a tag "p" filha de "main" */
+
+/* img + p {
+    font-weight: bold;
+    font-style: italic;
+} */
+/* acima estamos buscando a primeira tag "p" irmã da tag "img" */
+
+/* img ~ p {
+    background: yellow;
+} */
+/* acima estamos buscando todas as tags "p" irmãs da tag "img" */
+
+/* .principal p:not(#missao) {
+    background: orange;
+} */
+/* acima estamos buscando todos os paragrafos em principal, que não possuem o Id Missao */
+
 .banner {
     width: 100%;
 }
@@ -9,23 +30,26 @@
     margin: 0 0 1em;
     clear: left;
     /* clear: left, limpa o float a esquerda, para não exercer efeitos mais a partir desta linha */
+    /* color: rgba(0,0,0,0.3); */
+    /* rgba é utilizado para aplicar opacidade diretamente sobre cores */
+    /* text-shadow: 2px 2px #FF0000; */
 }
 
-.titulo-principal:first-letter {
+/* .titulo-principal:first-letter {
     font-weight: bold;
-}
+} */
 
-.titulo-principal:before {
+/* .titulo-principal:before {
     content: "[ ";
 }
 
 .titulo-principal:after {
     content: " ]";
-}
+} */
 
-p:first-line {
+/* p:first-line {
     font-style: italic;
-}
+} */
 
 .principal {
     padding: 3em 0;
@@ -47,6 +71,7 @@ p:first-line {
 }
 
 .utensilios {
+    /* width: calc(40% - 26px); */
     width: 120px;
     float: left;
     margin: 0 20px 20px 0;
@@ -70,6 +95,10 @@ p:first-line {
 .beneficios {
     padding: 3em 0;
     background: #888888;
+    /* box-shadow: inset 0 0 30px #FF0000; */
+    /* propriedade inset, serve para a sobra interna ao campo */
+    /* neste caso, os 30px são de espaçamento */
+    /* As sombras internas não são deslocáveis. Os valores no eixo X e Y devem ser 0. */
 }
 
 .conteudo-beneficios {
@@ -102,6 +131,15 @@ gerar um comportamento mais interessante em nosso site. */
 
 .imagem-beneficios {
     width: 60%;
+    opacity: 1;
+    transition: 1s;
+    box-shadow: 10px 10px 10px 0 #000000;
+    /* box-shadow: 10px 10px 30px 20px #000000, -10px -10px yellow, -20px 20px rgba(255,0,0,0.5); */
+    /* box-shadow: eixo "x", eixo "y", blur, intensidade da borda, cor; */
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3;
 }
 
 .video {
