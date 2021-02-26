@@ -1,66 +1,110 @@
-#banner {
+.banner {
     width: 100%;
 }
 
 .titulo-principal {
-    padding-left: 20px;
-}
-
-.principal {
-    background: #CCCCCC;
-    padding: 30px;
-}
-
-.titulo-centralizado {
     text-align: center;
+    font-size: 2em;
+    /* "em" tamanho da fonte base, neste caso, estamos usando 2 vezes esse tamanho base */
+    margin: 0 0 1em;
+    clear: left;
+    /* clear: left, limpa o float a esquerda, para não exercer efeitos mais a partir desta linha */
 }
 
-p {
-    text-align: center;    
+.titulo-principal:first-letter {
+    font-weight: bold;
 }
 
-#missao {
-    font-size: 20px;
+.titulo-principal:before {
+    content: "[ ";
 }
 
-em strong {
-    color: #FF0000;
+.titulo-principal:after {
+    content: " ]";
 }
 
-.beneficios {
-    background: #FFFFFF;
-    padding: 20px;
-}
-
-ul {
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
-}
-
-/* Quando colocamos a tag li, ela passou a ocupar 100% da largura da página e quebrar a linha depois dela. Ou seja, o próximo item começava na linha de baixo.
-Esse comportamento de uma tag ocupar a largura inteira da página é chamado “block”. Ele bloqueia o conteúdo daquela linha. Todos os itens da nossa linha têm o comportamento block. Uma imagem não bloqueia o conteúdo, ela deixa que existam outros na lateral, e esse tipo de conteúdo é considerado inline.
-A diferença entre eles é que mesmo que eu diminua o tamanho, diminua a largura de um elemento block, ele vai sempre ocupar aquela linha, mesmo preenchendo só metade.
-Um elemento inline não me deixa alterar, por exemplo, o espaçamento externo e interno dele.
-O display inline block ocupa só o tamanho do conteúdo, mas me deixa mexer na largura e espaçamentos. */
-
-.itens {
+p:first-line {
     font-style: italic;
 }
 
-.imagemBeneficios {
-    width: 50%;
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
+.principal p {
+    margin: 0 0 1em;
+}
 
+.principal strong {
+    font-weight: bold;
+}
 
-/* Nós enxergamos o espectro RGB, que quer dizer Red Green Blue. Ou seja, vermelho, verde e azul.
-Montamos a cor seguindo essa mesma característica, usando o dicionário hexadecimal. Para fazer isso, colocamos # e marcamos seis elementos. Os dois primeiros para marcar o vermelho, os dois segundos para marcar o verde e os dois últimos para marcar o azul. */
-/* Como é a representação numérica, ou em hexadecimal, para esses números? O zero é a ausência de cor, e o F é o máximo de cor. Então, se eu quiser representar, por exemplo, o preto, que é a ausência de todas as cores, coloco #000000. Ou seja, 00 para vermelho, 00 para verde e 00 para o azul. Se eu quiser representar o branco, coloco #FFFFFF. FF para o vermelho, FF para o verde e FF para o azul. */
-/* É importante saber também que existe outra forma de representar as cores, além das que já vimos. Temos as cores básicas, a linguagem hexadecimal e a RGB. O mesmo padrão RGB que falamos sobre as cores que conseguimos enxergar, temos um dicionário RGB. Um alfabeto. Ele vai do 0 até 255. Ou seja, ele tem 256 níveis de representação de cada cor.
-Para isso, o 0 também é a ausência e o 255 é o máximo. A representação no CSS é um pouco diferente. Ao invés de colocar #, eu coloco RGB( , , ), separando as cores por vírgula. Antes da primeira vírgula vem o vermelho. Então, se eu quiser representar o branco, coloco RGB(255, 255, 255). Se eu quiser representar só o azul, RGB(0, 0, 255). */
+.principal em {
+    font-style: italic;
+}
 
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
 
-/* padding espaçamento interno do elemento => utilizar px
-margin espaçamento externo do elemento => utilizar px */
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE,#888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:before {
+    content: "🟊";
+}
+
+.itens:nth-child(2n) {
+    font-weight: bold;
+}
+
+/* No CSS temos algo chamado pseudo-elementos. 
+Conhecemos alguns deles, como :hover, :active, :visited, :required. 
+Tais recursos são utilizados para marcar melhor nossos elementos e 
+gerar um comportamento mais interessante em nosso site. */
+
+.imagem-beneficios {
+    width: 60%;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
