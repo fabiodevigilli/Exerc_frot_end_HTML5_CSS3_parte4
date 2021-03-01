@@ -34,3 +34,17 @@ nav a:hover {
     color: #C78C19;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 480px) {
+    .caixa {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+}

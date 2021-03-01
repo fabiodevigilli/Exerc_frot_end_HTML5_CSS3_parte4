@@ -146,3 +146,13 @@ gerar um comportamento mais interessante em nosso site. */
     width: 560px;
     margin: 2em auto;
 }
+
+@media screen and (max-width: 480px) {
+    .principal, .mapa, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
+}
